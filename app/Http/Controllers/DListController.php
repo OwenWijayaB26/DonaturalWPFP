@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\DonateList;
-use Illuminate\Http\Request;
-
-use function Laravel\Prompts\search;
 
 class DListController extends Controller
 {

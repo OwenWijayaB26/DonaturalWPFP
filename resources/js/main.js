@@ -2,6 +2,7 @@ const donateBtn =  document.getElementById('donateButton');
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 const slug = document.getElementById('slug').value;
 const errLbl = document.getElementById('err-label');
+
 donateBtn.addEventListener('click', async function(){
     let amount = document.getElementById('amount').value;
     if(amount == null || amount <= 0){

@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\DonateList;
-use Exception;
 use Illuminate\Http\Request;
-use Midtrans\Config;
-use Midtrans\Snap;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
 
 class DonationController extends Controller
 {
@@ -26,6 +22,7 @@ class DonationController extends Controller
                 'first_name' => $user->name,
                 'email' => $user->email,
             ],
+            'finish_redirect_url' => null
         ];
         $auth = base64_encode(env('MIDTRANS_SERVER_KEY'));
         $resp = Http::withHeaders([
